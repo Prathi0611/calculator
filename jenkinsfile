@@ -1,0 +1,16 @@
+pipeline {
+agent any 
+stages {
+stage('checkout code') {
+steps {
+git
+'https://github.com/jayanise0703/jenkins.git'
+}
+}
+stage('print message') {
+steps {
+echo 'Hello! jenkins pipeline executed'
+}
+}
+}
+}
